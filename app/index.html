@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>B9 - Funding Hub</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+    <div class="wrapper internal-wrapper">
+      <div class="header">
+        <p class="title">Funding Hub</p>
+      </div>
+      
+      <div class="main">
+
+         <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a data-target="#Browse" data-toggle="tab">Browse Projects</a></li>
+          <li><a data-target="#Create" data-toggle="tab">Create Project</a></li>
+          <li><a data-target="#Contribute" data-toggle="tab">Contribute to Project</a></li>
+        </ul>
+
+        <!--  BROWSE PROJECTS -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="Browse">
+
+            <div class="row table-row">
+              <div class="col-xs-10 col-sm-offset-1 table-container" id="project-table">
+              
+                <div class="row full-width-row header-row">
+
+                </div>
+
+                <div class="row full-width-row table-row">
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+          <!--  CREATE PROJECT -->
+          <div class="tab-pane" id="Create">
+
+            <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-sm-offset-3">
+            
+              <p class='input-label'>Project Owner:</p>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 ">
+                <input type="text" class="form-control create-project-owner" placeholder="Owner's Address" aria-describedby="basic-addon1">
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-sm-offset-3">
+            
+              <p class='input-label'>Amount To Be Raised:</p>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 ">
+                <input type="number" class="form-control create-project-amount" placeholder="Amount in Wei">
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-sm-offset-3">
+            
+              <p class='input-label'>Deadline:</p>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 ">
+                <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control create-project-deadline"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+              </div>
+          </div>
+
+          <div class="row">
+          <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-offset-7">
+                <div class="button submit-button" onclick="createProject();"style="float:right;">Submit</div>
+            </div>
+          </div>
+          </div>
+
+        <!--  CONTRIBUTE TO PROJECT -->
+        <div class="tab-pane" id="Contribute">
+
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-sm-offset-3">
+            
+              <p class='input-label'>Project Address:</p>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 ">
+                <input type="text" class="form-control contribute-project-address" placeholder="e.g. 0xdaba9d06b0e2592f47a8f29ab2efad85eb6a1f7b" aria-describedby="basic-addon1">
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-sm-offset-3">
+            
+              <p class='input-label'>Amount:</p>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 ">
+                <input type="number" class="form-control contribute-project-amount" placeholder="Amount in Wei">
+              </div>
+          </div>
+
+          <div class="row">
+          <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-offset-7">
+                <div class="button submit-button" onclick="contribute();" style="float:right;">Submit</div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+
+    </div>
+    <script>
+     $(function () {
+                $('#datetimepicker1').datetimepicker({
+                  format : "YYYY-MM-DD HH:mm"
+                });
+            });
+    </script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
